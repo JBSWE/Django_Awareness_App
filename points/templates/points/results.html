@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+
+{% block body %}
+
+    <div class="container">
+
+    <h2>Your results are {{ score }}/6</h2>
+    <h2>You gained a total of {{ points }} points</h2>
+    <a href="/points/leaderboard/" class="btn btn-link" role="button">Click here to checkout the leaderboard</a>
+
+
+    </div>
+{%  endblock %}

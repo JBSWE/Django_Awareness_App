@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title> profile</title>
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+    <div class="row">
+        <div class="jumbotron">
+        <div class="col-lg-4">
+           <h3>Profile</h3>
+        <p1>First Name: &nbsp{{ user.first_name }}</p1>
+        <br/>
+            <br/>
+        <p1>Last Name:&nbsp{{ user.last_name }}</p1>
+        <br/>
+            <br/>
+        <p1>Email:&nbsp{{ user.email }}</p1>
+        <br/>
+            <br/>
+        <a href="/account/profile/edit" class="btn btn-outline-primary" role="button" id="edit_profile">Edit &raquo;</a>
+        </div>
+            </div>
+
+        <div class="jumbotron">
+        <div class="col-lg-4">
+           <h3> Details</h3>
+        <p1>Age:&nbsp{{ details.age }}</p1>
+        <br/>
+            <br/>
+        <p1>Gender:&nbsp{{ details.get_gender_display }}</p1>
+        <br/>
+            <br/>
+        <p1>Education:&nbsp{{ details.get_education_display }}</p1>
+        <br/>
+            <br/>
+        <p1>Country:&nbsp{{ details.country.name }}</p1>
+        <br/>
+            <br/>
+            <a href="/account/profile/edituserprofile" class="btn btn-outline-primary" role="button">Add/Edit &raquo;</a></br></br>
+       </div>
+            </div>
+        <div class="jumbotron">
+        <div class="col-lg-4">
+          <h2>Password Management</h2>
+          <p>To change your password, click the button below</p>
+          <a href="/account/profile/editpassword" class="btn btn-danger" role="button">Change Password &raquo;</a>
+        </div>
+
+            </div>
+
+        </div>
+
+
+
+<style>
+    .jumbotron {
+    margin: 10px;
+        width: 360px;
+}
+</style>
+
+
+
+    </div>
+
+
+
+
+
+
+{% endblock %}

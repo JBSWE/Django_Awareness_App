@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+
+
+{% block body %}
+
+    <div class="container">
+
+         <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1 id="name-text">Welcome {{ user.first_name }}</h1>
+        <p class="lead">Welcome to the Cyber Security Awareness Portal, this allows users to gain valuable knowledge on Cyber Security Awareness, whilst having fun at the same time. You have two options to choose from, either complete a program and gain points or access the internet instantly, although you will lose points.</p>
+        <p><a class="btn btn-lg btn-danger" href="/points/instantaccess/" role="button">Gain instant internet access?</a></p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>Points</h2>
+            <p><strong>You currently have {{ points }} points!</strong> To gain more points to compete against other users, try to complete more CSAP programs. </p>
+          <p><a class="btn btn-primary" href="/points/leaderboard" role="button">See Leaderboard &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Program</h2>
+          <p>Start your first program today and gain points to climb higher in the leaderboards! Points can earn you prizes.</p>
+          <p><a class="btn btn-primary" href="/programs/program1" role="button">Start &raquo;</a></p>
+       </div>
+        <div class="col-lg-4">
+          <h2>Profile</h2>
+          <p>Please make sure all information associated with your profile is correct. If you want to edit your profile details click the button below.</p>
+          <p><a class="btn btn-primary" href="/account/profile" role="button">Profile &raquo;</a></p>
+        </div>
+      </div>
+
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>&copy; Company 2018</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    </div>
+{%  endblock %}

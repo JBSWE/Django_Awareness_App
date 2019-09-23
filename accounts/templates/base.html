@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+
+{% if user.is_authenticated %}
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="/account/">CSAP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item item">
+                    <a class="nav-link" href="/account">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/account/profile/">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/programs/secure_passwords">Secure Passwords</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/programs/malware">Malware</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/points/leaderboard/">Leaderboard</a>
+                </li>
+            </ul>
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><a href="/account/logout"
+                                                                                 class="deco-none"
+                                                                                 style="text-decoration:none;color:#FFFFFF">Logout<a/>
+            </button>
+
+
+        </div>
+    </nav>
+{% else %}
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="/">CSAP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item item">
+                    <a class="nav-link" href=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=""></a>
+                </li>
+            </ul>
+
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="/account/register"
+                                                                                  class="deco-none"
+                                                                                  style="text-decoration:none;color:#FFFFFF" >Register<a/>
+            </button>
+
+        </div>
+    </nav>
+
+
+
+{% endif %}
+
+
+{% block body %}
+
+
+
+{% endblock %}
+</body>
+</html>
